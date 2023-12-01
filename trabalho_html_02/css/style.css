@@ -1,0 +1,332 @@
+
+/* ESTILO GERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;   
+}
+
+body{
+    background-color: #000;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #f2a310;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+/* ESTILO DO CABEÇALHO */
+
+header{
+    padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: #5c5c5c;;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color: #fff;
+    transform: scale(1.05);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+.btn-contato button:hover{
+    box-shadow: 0px 0px 8px #ffc862;
+    transform: scale(1.05);
+}
+
+.logo :hover{
+    transform: scale(1.05);
+    transition: .2s;
+    
+}
+
+/* ESTILO DO HOME DO SITE */
+section.topo-do-site{
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1{
+    color: #fff;
+    font-size: 42px;
+    line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site h1 span{
+    color: #f2a310;
+}
+
+.topo-do-site .txt-topo-site p{
+    color: #fff;
+    margin: 40px 0;
+    text-align: justify;
+}
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+/* ESTILO DO RODAPE */
+.rodape {
+    
+    padding: 24px;
+    color: var(--cor-secundaria);
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rodape img {
+    position: absolute;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.5s;
+}
+
+.rodape img:hover {
+    transform: scale(1.2);
+}
+
+.texto-rodape{
+
+    position: absolute;
+    bottom: 20px;
+}
+
+/* ESTILO DO SOBRE NÓS */
+.img-sobre{
+    margin-top: 100px;
+    margin-left: -20px;
+    
+}
+
+section.sobre{
+    padding: 20px 4%;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre{
+    color: #fff;
+}
+
+.sobre .txt-sobre h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span{
+    color: #f2a310;
+    display: block;
+}
+
+.sobre .txt-sobre p{
+    margin: 30px 0;
+    text-align: justify;
+}
+
+/* ESTILO DO FORMULÁRIO DE CONTATO */
+h2.titulo{
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: #f2a310;
+}
+
+section.formulario{
+    padding: 40px 4%;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input{
+    width: 100%;
+    background-color: #242424;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px; 
+}
+
+form textarea{
+    width: 100%;
+    background-color: #242424;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px; 
+}
+
+form textarea{
+    resize: none;
+    max-height: 160px;
+}
+
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input{
+    width: 120px;
+    background-color: #f2a310;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+form .btn-enviar input:hover{
+    box-shadow: 0px 0px 8px #ffc862;
+    transform: scale(1.05);
+}
+
+
+@media screen and (max-width: 1020px){
+    /* CLASSES GERAIS */
+    .flex{
+         flex-direction: column;
+    }
+
+    .topo-do-site .flex{
+        flex-direction: column-reverse;
+    }
+    
+    /* CABEÇALHO */
+    .menu-desktop, .btn-contato{
+         
+    }
+
+    /* RODAPÉ */
+    .rodape img {
+        position: relative;
+    }
+
+    .texto-rodape{
+        position: relative;
+    }
+
+    /* TOPO DO SITE */
+    section.topo-do-site .flex{
+       gap: 40px;
+    }
+
+    section.topo-do-site{
+        padding: 80px 8%;
+    }
+
+    .topo-do-site h1{
+        font-size: 30px;
+    }
+
+    .topo-do-site .img-topo-site img{
+        width: 100%;
+    }
+
+    /* SOBRE */
+    section.sobre .flex{
+        flex-direction: column-reverse;
+    }
+
+    section.sobre{
+        padding: 80px 8%;
+    }
+
+    .sobre .txt-sobre h2{
+        font-size: 34px;
+        line-height: 35px;
+        text-align: center;
+    }
+    
+
+    section.topo-do-site .btn-contato{
+        text-align: center;
+    }
+
+    .img-sobre img{
+        margin-top: -100px;
+        margin-left: 25px;    
+    }
+
+
+
+
+}
+
+
